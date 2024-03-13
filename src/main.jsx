@@ -6,7 +6,6 @@ import Layout from './Layout.jsx'
 import Home from './Components/Home/Home.jsx'
 import './index.css'
 import { Provider } from 'react-redux'
-import { store } from './app/store.js'
 import WebFont from 'webfontloader'
 
 WebFont.load({
@@ -26,8 +25,6 @@ const router = createBrowserRouter([{
 }])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Provider store={store}>
     <RouterProvider router = {router}/>
-    </Provider>
   </React.StrictMode>,
 )
